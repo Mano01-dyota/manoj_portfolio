@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manoj M | Flutter Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f9fbfd;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    :root {
+      --primary: #2563eb;
+      --secondary: #f1f5ff;
+      --dark: #1e293b;
+    }
+
+    header {
+      background: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h2 {
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-img {
+      text-align: center;
+    }
+
+    .hero-img img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--primary);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--dark);
+    }
+
+    .hero span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      margin: 20px 0;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    /* About */
+    .about {
+      background: white;
+      border-radius: 12px;
+      padding: 50px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about-info p {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .about-details {
+      background: var(--secondary);
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    .about-details p {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .about h2,
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--dark);
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 25px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      font-weight: 500;
+    }
+
+    /* Experience */
+    .experience-box {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .experience-box ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    .experience-box li {
+      margin-bottom: 8px;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .project h4 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    /* Contact */
+    .contact {
+      background: var(--secondary);
+      text-align: center;
+      border-radius: 12px;
+      padding: 50px 20px;
+    }
+
+    .contact p {
+      margin: 8px 0;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width:768px){
+      header{
+        flex-direction: column;
+        gap: 15px;
+      }
+      nav a{
+        margin: 10px;
+      }
+      .hero h1{
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Manoj M</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div>
+    <h1>Hi, I'm <span>Manoj M</span></h1>
+    <h3>Flutter Developer</h3>
+    <p>
+      Passionate Flutter developer specializing in building scalable,
+      high-performance mobile and web applications using Flutter and Firebase.
+    </p>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </div>
+
+  <div class="hero-img">
+    <!-- Replace profile.jpg with your own photo file -->
+    <img src="profile.jpg" alt="Manoj M Profile Photo">
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="about">
+    <h2>About Me</h2>
+
+    <div class="about-content">
+
+      <div class="about-info">
+        <p>
+          I am a dedicated Flutter Developer with strong experience in
+          cross-platform mobile and web development. I specialize in creating
+          responsive, user-friendly, and performance-optimized applications.
+        </p>
+
+        <p>
+          Along with development, I have experience working as a Scrum Master
+          and Project Manager, handling Agile ceremonies, task planning, and
+          quality assurance.
+        </p>
+
+        <p>
+          I enjoy learning new technologies, improving my coding standards,
+          and contributing to innovative projects in collaborative teams.
+        </p>
+      </div>
+
+      <div class="about-details">
+        <p><strong>Name:</strong> Manoj M</p>
+        <p><strong>Email:</strong> manojm2001@gmail.com</p>
+        <p><strong>Phone:</strong> 8870675076</p>
+        <p><strong>Location:</strong> Chennai, India</p>
+        <p><strong>Degree:</strong> B.E. Mechanical Engineering</p>
+        <p><strong>Experience:</strong> 1+ Years</p>
+        <p><strong>Languages:</strong> English, Tamil</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div class="skill-card">Flutter & Dart</div>
+    <div class="skill-card">Firebase (Auth, Firestore, Storage)</div>
+    <div class="skill-card">REST APIs</div>
+    <div class="skill-card">Figma to Flutter</div>
+    <div class="skill-card">Provider / MVVM</div>
+    <div class="skill-card">Git & GitHub</div>
+    <div class="skill-card">Agile / Scrum</div>
+    <div class="skill-card">Manual Testing & QA</div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="experience-box">
+    <h3>Junior Software Developer & Project Manager</h3>
+    <h4>Atya Consultancy Services | Dec 2024 - Present</h4>
+
+    <ul>
+      <li>Developed and maintained Flutter mobile and web applications</li>
+      <li>Integrated Firebase Authentication (Google & Email login)</li>
+      <li>Converted Figma designs into production-ready UI</li>
+      <li>Facilitated Agile ceremonies as Scrum Master</li>
+      <li>Managed tasks using GitHub Projects (Kanban)</li>
+      <li>Performed daily testing and quality verification</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects">
+
+    <div class="project">
+      <h4>Election App</h4>
+      <p>
+        Flutter-based Android & Web application with responsive UI and
+        Firebase backend for client demonstrations.
+      </p>
+    </div>
+
+    <div class="project">
+      <h4>Food Delivery App</h4>
+      <p>
+        Designed and developed login and food listing screens with
+        Firebase authentication and database integration.
+      </p>
+    </div>
+
+    <div class="project">
+      <h4>Stocks Portfolio App</h4>
+      <p>
+        Automated trading system with stock scanner, terminal execution,
+        and premarket trade automation.
+      </p>
+    </div>
+
+    <div class="project">
+      <h4>Food Truck App</h4>
+      <p>
+        Modular architecture with OTP authentication, animations,
+        and reusable libraries.
+      </p>
+    </div>
+
+    <div class="project">
+      <h4>Learning Management System (LMS)</h4>
+      <p>
+        Complete LMS ecosystem with Admin Web Panel and Student Mobile App
+        using Flutter and Firebase.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: manojm2001@gmail.com</p>
+    <p>Phone: 8870675076</p>
+    <p>LinkedIn: linkedin.com/in/manoj-m-987a01297</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Manoj M | Flutter Developer</p>
+</footer>
+
+</body>
+</html>
